@@ -28,8 +28,8 @@
   --small-font-size: 0.9em;
   --normal-font-size: 1em;
 
-  /*============== Scroll bar colors ================*/
-  --scroll-bar-color: #c5cadf;
+  /*============== Scroll skills-bar colors ================*/
+  --scroll-skills-bar-color: #c5cadf;
   --scroll-thumb-color: #70768a;
   --scroll-thumb-hover-color: #454f6b;
 }
@@ -71,9 +71,9 @@ header {
   transition: 0.6s ease;
 }
 
-.nav-bar {
+.navigationBar {
   position: relative;
-  height: calc(4rem + 1rem);
+  height: 4rem;
   max-width: 1250px;
   display: flex;
   justify-content: space-between;
@@ -81,10 +81,10 @@ header {
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
-  transition: 0.6s ease;
+  transition: 0.5s ease;
 }
 
-.nav-bar .logo {
+.navigationBar .logo {
   color: var(--first-color);
   font-size: 1.3em;
   font-weight: 600;
@@ -138,20 +138,20 @@ header {
   color: var(--hover-color);
 }
 
-.home-container .info h2 {
+.home-container .information h2 {
   font-size: 4em;
   font-weight: 600;
   line-height: 70px;
 }
 
-.home-container .info h3 {
+.home-container .information h3 {
   color: var(--third-color);
   font-feature-settings: 1.3em;
   font-weight: 600;
   line-height: 50px;
 }
 
-.home-container .info p {
+.home-container .information p {
   color: var(--third-color);
   font-size: var(--normal-font-size);
   max-width: 350px;
@@ -159,7 +159,7 @@ header {
 
 .button {
   background: var(--second-color);
-  columns: #fff;
+  color: #fff;
   font-size: var(--normal-font-size);
   font-weight: 500;
   display: inline-block;
@@ -180,6 +180,7 @@ header {
 .home-container .home-image img {
   width: 90%;
   transform: translate(0, 0);
+  border-radius: 10px;
 }
 
 .home .scroll-down {
@@ -208,4 +209,87 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section {
+  position: relative;
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6rem 2rem 2rem;
+}
+
+.sub-section {
+  position: relative;
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6rem 0;
+}
+
+.section-title-01 {
+  font-size: 4.5em;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(to top, transparent 0%, var(--first-color) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.1;
+}
+
+.section-title-02 {
+  font-size: 2.5em;
+  font-weight: 700;
+  transform: translateY(-80px);
+}
+
+.section-title-02::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  right: 0;
+  bottom: 0;
+  background-color: var(--second-color);
+}
+
+.container {
+  position: relative;
+  flex-direction: column;
+}
+
+/* =-=-=-=-=-=-=-=-=-= About  =-=-=-=-=-=-=-=-= */
+.about .container .content {
+  column-gap: 40px;
+  width: 100%;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  max-width: 100%;
+  min-width: 300px;
+  border-radius: 10px;
+}
+
+.about-information .about-description {
+  max-width: 600px;
+}
+
+.about-information .about-description h3 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-information .about-description h4 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-information .about-description p {
+  text-align: justify;
 }
