@@ -71,6 +71,11 @@ header {
   transition: 0.6s ease;
 }
 
+header.sticky {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: var(--box-shadow);
+}
+
 .navigationBar {
   position: relative;
   height: 4rem;
@@ -84,26 +89,36 @@ header {
   transition: 0.5s ease;
 }
 
+header.sticky .navigationBar {
+  height: 3.5rem;
+}
 .navigationBar .logo {
   color: var(--first-color);
   font-size: 1.3em;
   font-weight: 600;
 }
 
-.nav-items a {
+.navigation-items a {
   color: var(--first-color);
   font-size: var(--normal-font-size);
   font-weight: 500;
 }
 
-.nav-items a:not(:last-child) {
-  margin-right: 50px;
-}
-
-.nav-items a:hover {
+.navigation-items a.active {
   color: var(--second-color);
 }
 
+.navigation-items a:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation-items a:hover {
+  color: var(--second-color);
+}
+
+.navigation-menu-button {
+  display: none;
+}
 /*=-=-=-=-=-=-=-= Home Section =-=-=-=-=-=-=-=-=*/
 .home {
   position: relative;
@@ -413,4 +428,129 @@ header {
 
 .experience-cards .hr p {
   text-align: justify;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= Contact me section =-=-=-=-=-=-=-=-=-=-= */
+.contact .container .content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contactMe p {
+  color: var(--third-color);
+  font-size: 1.6em;
+  margin-bottom: 30px;
+}
+
+.contactMe p span {
+  color: var(--first-color);
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  color: var(--first-color);
+  background: var(--transparent-color-02);
+  font-size: var(--normal-font-size);
+  margin: 20px;
+  padding: 15px 100px 20px 20px;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  width: 94%;
+}
+
+::placeholder {
+  color: var(--first-color);
+}
+
+.contact-form .name input {
+  width: 94%;
+}
+
+.contact-form .email {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form .email input {
+  width: 90%;
+}
+
+.contact-form .button {
+  border: none;
+  margin-top: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 1070px) {
+  .navigation {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-color-01);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  .navigation.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navigation-items {
+    position: relative;
+    background: var(--model-bg-color);
+    width: 600px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+  }
+
+  .navigation-items a {
+    margin: 15px 50px;
+  }
+
+  .navigation-close-button {
+    position: absolute;
+    background: url(/static/img/png-transparent-computer-icons-button-close-angle-rectangle-logo-thumbnail.png)
+      no-repeat;
+    filter: var(--color-filter);
+    background-size: 12px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    margin: 10px;
+  }
+
+  .navigation-menu-button {
+    background: url(/static/img/share-icon-lunch-user-interface-hamburger-button-restaurant.jpg)
+      no-repeat;
+    filter: var(--color-filter);
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: block;
+  }
 }

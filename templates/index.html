@@ -6,7 +6,10 @@
     <link rel="icon" type="image" href="/static/img/favicon-32x32.png" />
 
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="width=device-width, initial-scale=1.0 shrink-to-fit=no"
+      name="viewport"
+    />
     <!-- CSS links-->
     <link rel="stylesheet" href="/static/css/sytle.css" />
     <link
@@ -20,7 +23,8 @@
       <div class="navigationBar">
         <a href="#" class="logo">Saylee</a>
         <div class="navigation">
-          <div class="nav-items">
+          <div class="navigation-items">
+            <div class="navigation-close-button"></div>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#previousWork">Previous Work</a>
@@ -28,6 +32,7 @@
             <a href="#contact">Contact</a>
           </div>
         </div>
+        <div class="navigation-menu-button"></div>
       </div>
     </header>
 
@@ -182,7 +187,6 @@
             <div class="experience-cards">
               <div class="upper">
                 <h3>Software Engineer</h3>
-                <h5>Full Time</h5>
                 <span>Nov 2021 – July 2022</span>
               </div>
               <div class="hr"></div>
@@ -197,6 +201,128 @@
       </div>
     </section>
 
+    <!--================ Previous Work =================-->
+    <section class="previousWork section" id="projects">
+      <div class="container flex-center">
+        <h1 class="section-title-01">Projects</h1>
+        <h2 class="section-title-02">Projects</h2>
+        <div class="content">
+          <div class="skills-description">
+            <h3>Projects</h3>
+          </div>
+          <div class="skills-information">
+            <div class="experience-cards">
+              <div class="upper">
+                <h3>AeroHub</h3>
+              </div>
+              <div class="hr"></div>
+              <p>
+                • Designed and developed an Airline information Storage
+                Application in 3 stages. <br />
+                • Created Command Line Interface (CLI) application to store data
+                in Text and XML files. <br />
+                • Implemented REST APIs using Jetty Server for improved
+                functionality. <br />
+                • Developed Android application with Java Backend and Android
+                Studio front end to enhance user experience.
+              </p>
+            </div>
+            <div class="experience-cards">
+              <div class="upper">
+                <h3>Movie Ticket Booking Application</h3>
+              </div>
+              <div class="hr"></div>
+              <p>
+                • Developed a website that allows users to search and book movie
+                tickets <br />
+                • Learned concepts of Bootstrap, HTML, and CSS
+              </p>
+            </div>
+            <div class="experience-cards">
+              <div class="upper">
+                <h3>Emotion-Based Music Recommendation System</h3>
+              </div>
+              <div class="hr"></div>
+              <p>
+                • Built a system using two algorithms: Haar Cascade to detect
+                facial features and Fisher-Face Algorithms to detect facial
+                expressions to recommend music <br />
+                • Created own dataset using .xml file extension, and trained
+                model using Principal Component Analysis (PCA) and Linear
+                Discriminant Analysis (LDA)
+              </p>
+            </div>
+            <div class="experience-cards">
+              <div class="upper">
+                <h3>An Online Ordering and Inventory Management System</h3>
+              </div>
+              <div class="hr"></div>
+              <p>
+                • Created a database system with admin and user modules and
+                performed CRUD operations using MySQL queries <br />
+                • Implemented an admin module to allow the owner of a coffee
+                shop to maintain records of inventory and menus <br />
+                • Developed a user module for customers to place online orders
+                for food and beverages
+              </p>
+            </div>
+            <div class="experience-cards">
+              <div class="upper">
+                <h3>E-Payment Using Visual Cryptography and Steganography</h3>
+              </div>
+              <div class="hr"></div>
+              <p>
+                • Involved in the implementation of a novel approach that
+                requires less information for fund transfer <br />
+                • Used Moni Naor and Adi Shamir’s Visual Cryptographic
+                algorithm, which secures the customer’s data by encryption
+                <br />
+                • Integrated Quantum Cryptography, and Steganography to prevent
+                security threats by securing the transmission of one-time
+                password and authentication details
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================ Contact Me ================= -->
+    <section class="contact section" id="contact">
+      <div class="container flex-center">
+        <h1 class="section-title-01">Contact Me</h1>
+        <h2 class="section-title-02">Contact Me</h2>
+        <div class="content">
+          <div class="contactMe">
+            <p>
+              Please send me a message <br /><span>
+                If you have any questions</span
+              >
+            </p>
+            <form action="" class="contact-form">
+              <div class="name">
+                <input type="text" placeholder="Name" />
+              </div>
+              <div class="email">
+                <input type="email" placeholder="Email" />
+                <input type="text" placeholder="Subject" />
+              </div>
+              <div class="message">
+                <textarea
+                  name="message"
+                  id=""
+                  rows="7"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <button class="button" type="submit">
+                Send Message<i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--========== Javascript files ==========-->
     <script src="/static/js/main.js"></script>
   </body>
